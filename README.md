@@ -7,7 +7,7 @@ Usage:
 
 ```bash .\destination.sh <dist>```, 
 
-prints out a link to an OpenStreetMap pin.
+prints out a link to an OpenStreetMap pin to terminal.
 
 May well drop a pin in a body of water or somewhere else you can't go, just reroll.
 
