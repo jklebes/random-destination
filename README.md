@@ -15,7 +15,7 @@ Command line / very simple / personal use
 
 -> Attempts OpenStreetmap address lookup.
 
-If that doesn't work, find our your coordinates (here)[https://gps-coordinates.org/my-location.php] or elsewhere.
+If that doesn't work, find our your coordinates here [https://gps-coordinates.org/my-location.php] or elsewhere.
 
 ```python destination.py home 50.363 2.4848```
 
@@ -33,7 +33,7 @@ Destination exactly 5 km away.
 
 ```python destination.py dest 5 0```
 
-prints out a link to an OpenStreetMap pin to terminal.  It's clickable on my machine.
+prints out a link to an OpenStreetMap pin to terminal.  It's clickable on my machine, on windows you may have to copy-paste the link to a browser.
 
 ## Hints
 
