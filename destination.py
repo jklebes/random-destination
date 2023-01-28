@@ -3,7 +3,7 @@ import math
 import cmath
 import argparse
 
-def rand_loc(dist=5, stdev=.5, home=(50,3)):
+def rand_loc(dist=5, stdev=.1, home=(50,3)):
     home_lat = home[0]
     dist_km=random.gauss(dist, stdev)
     angle =random.uniform(0, 2*math.pi)
@@ -34,6 +34,7 @@ def readhome(filename="./home.txt"):
 def sethome(lat, lon, filename="./home.txt"):
     f=open(filename, "w")
     f.write(" ".join([str(x) for x in (lat, lon)]))
+    f.close()
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser()
@@ -42,7 +43,7 @@ if __name__=="__main__":
     args=parser.parse_args()
     if args.program=="home":
       restargs = args.rest
-      msg = 'Input your coordinates as two numbers, for example "python destination.py home 50.123 4.96"'
+      msg = 'Input your coordinates as two numbers, for example "python destination.py home 50.123 -4.96"'
       if len(restargs)<2:
         print(msg)
         exit()
@@ -55,7 +56,7 @@ if __name__=="__main__":
           print(msg)
           exit()
       sethome(lat,lon)
-    elif args.program=="dest":
+    elif args.program=="dest" or args.program=="path":
       restargs = args.rest
       home=readhome()
       if home==0:
@@ -72,13 +73,17 @@ if __name__=="__main__":
               print("expected standard deviation (a number) as second argument of destination.py dest")
               exit()
       else:
-          stdev = 0.5
+          stdev = 0.1
       if len(restargs)>2:
           print('too many arguments, ignoring "', ' '.join(restargs[2:])+'"')
       coords_  = rand_loc(dist, stdev, home)
       coords=[str(x) for x in coords_]
-      link="www.openstreetmap.org/?mlat="+coords[0]+"&mlon="+coords[1]+"&zoom=12"
+      if args.program=="dest":
+        link="https://www.openstreetmap.org/?mlat="+coords[0]+"&mlon="+coords[1]+"&zoom=12"
+      else:
+        home=[str(x) for x in home]
+        link = "https://www.openstreetmap.org/directions?engine=graphhopper_foot&route="+home[0]+"%2C"+home[1]+"%3B"+coords[0]+"%2C"+coords[1]+"#map=13/"+home[0]+"/"+home[1]
       print(link)
     else:
-      print('usage "destination.py home <address>" or "destination dest <distance>".  Got first keyword argument '+args.program+'instead of "home" or "dest"')  
+      print('usage "destination.py home <address>" or "destination.py path <distance>" or "destination.py dest <distance>".  Got first keyword argument '+args.program+'instead of "home","dest", or "path".')  
       exit()
