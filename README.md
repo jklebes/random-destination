@@ -11,11 +11,7 @@ Command line / very simple / personal use
 
 (Windows: replace ```python``` with ```python -m``` or ```py -m```)
 
-```python destination.py home "123 Example Street, 18992 Mytown, Germany"``` 
-
--> Attempts OpenStreetmap address lookup.
-
-If that doesn't work, find our your coordinates here [https://gps-coordinates.org/my-location.php] or elsewhere.
+Find our your coordinates here [https://gps-coordinates.org/my-location.php] or elsewhere and set coordinates:
 
 ```python destination.py home 50.363 2.4848```
 
