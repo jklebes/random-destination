@@ -1,5 +1,5 @@
 # random-destination
-Simply drops a map pin N km from your location.  I use this for out-and-back runs.  For exmample, if I want to run 10km, I drop a pin 5km or a bit less away and go there.  
+Simply drops a map pin N km from your location.  I use this for out-and-back runs.  For example, if I want to run 10km, I drop a pin 5km or a bit less away and go there.  
 
 Take a walk.  Explore your neighborhood.  A bit like randonauting, except we don't get special magic quantum random bits piped over from Australia, so your walk will not be haunted.
 
