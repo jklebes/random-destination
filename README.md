@@ -17,7 +17,7 @@ Find our your coordinates here [https://gps-coordinates.org/my-location.php] or 
 
 #### Generate destination
 
-Pin at destination approximately 5km away (default precision is +- 0.5 km).
+Pin at destination approximately 5km away (default precision is +- 0.1 km in Gaussian distribution).
 
 ```python destination.py dest 5```
 
