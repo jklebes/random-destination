@@ -35,7 +35,7 @@ prints out a link to an OpenStreetMap pin to terminal.  It's clickable on my mac
 
 May well drop a pin in a body of water or somewhere else you can't go, just reroll.
 
-Distances are as the crow flies, the actual distance along streets is longer.
+Distances are as the crow flies, the actual distance along streets is longer - so input a number a bit less than half the run distance.
 
 ## TODO
 - Future improvements to distance could be to estimate the average factor or look at actual OpenStreetMap graphhopper path.
