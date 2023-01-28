@@ -7,13 +7,27 @@ Command line / very simple / personal use
 
 ## Usage:
 
-Set home
+#### Set and save starting location
+
+(Windows: replace ```python``` with ```python -m``` or ```py -m```)
+
+```python destination.py home "123 Example Street, 18992 Mytown, Germany"``` 
+
+-> Attempts OpenStreetmap address lookup.
+
+If that doesn't work, find our your coordinates (here)[https://gps-coordinates.org/my-location.php] or elsewhere.
 
 ```python destination.py home 50.363 2.4848```
 
-Generate destination
+#### Generate destination
 
-```python destination.py goal 5```, 
+Destination approximately 5km away.
+
+```python destination.py dest 5```
+
+Destination 5+-.1 km away.
+
+```python destination.py dest 5 .1```
 
 prints out a link to an OpenStreetMap pin to terminal.  It's clickable on my machine.
 
@@ -24,5 +38,5 @@ May well drop a pin in a body of water or somewhere else you can't go, just rero
 Distances are as the crow flies, the actual distance along streets is longer.
 
 ## TODO
-- Future improvements to dostance could be to estimate the average factor or look at actual OpenStreetMap graphhopper path.
+- Future improvements to distance could be to estimate the average factor or look at actual OpenStreetMap graphhopper path.
 - Better parse inputted coordinates, address, or previously saved location.
