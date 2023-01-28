@@ -33,7 +33,7 @@ Path to destination exactly 5 km away.
 
 ```python destination.py path 5 0```
 
-prints out a link to an OpenStreetMap pin to terminal.  It's clickable on my machine, on windows you may have to copy-paste the link to a browser.
+prints out a link to the OpenStreetMap website displaying the pin or route to terminal.  It's clickable on my machine, on windows you may have to copy-paste the link to a browser.
 
 ## Hints
 
