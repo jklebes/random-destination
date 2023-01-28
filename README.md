@@ -37,7 +37,7 @@ prints out a link to an OpenStreetMap pin to terminal.  It's clickable on my mac
 
 ## Hints
 
-May well drop a pin in a body of water or somewhere else you can't go, just reroll.
+May well drop a pin in a body of water or somewhere else you can't go, just reroll.  If requesting a ```path``` and the destination generates in a body of water, it will move the endpoint to the shore and the path will be shorter than expected.
 
 Distances are as the crow flies, the actual distance along streets is longer - so input a number a bit less than half the run distance.
 
