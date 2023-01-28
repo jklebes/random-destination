@@ -21,13 +21,17 @@ If that doesn't work, find our your coordinates (here)[https://gps-coordinates.o
 
 #### Generate destination
 
-Destination approximately 5km away.
+Destination approximately 5km away (default precision is +- 0.5 km).
 
 ```python destination.py dest 5```
 
-Destination 5+-.1 km away.
+Destination 5+-2 km away.
 
-```python destination.py dest 5 .1```
+```python destination.py dest 5 2```
+
+Destination exactly 5 km away.
+
+```python destination.py dest 5 0```
 
 prints out a link to an OpenStreetMap pin to terminal.  It's clickable on my machine.
 
