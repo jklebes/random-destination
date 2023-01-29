@@ -5,8 +5,8 @@ import argparse
 
 def rand_loc(dist=5, stdev=.1, home=(50,3)):
     home_lat = home[0]
-    dist_km=dist;#random.gauss(dist, stdev)
-    angle =0;#random.uniform(0, 2*math.pi)
+    dist_km=random.gauss(dist, stdev)
+    angle =random.uniform(0, 2*math.pi)
     change_km=cmath.rect(dist_km, angle)
     dist_lat = change_km.imag
     dist_lon = change_km.real
