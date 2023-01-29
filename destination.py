@@ -5,8 +5,8 @@ import argparse
 
 def rand_loc(dist=5, stdev=.1, home=(50,3)):
     home_lat = home[0]
-    dist_km=random.gauss(dist, stdev)
-    angle =random.uniform(0, 2*math.pi)
+    dist_km=dist;#random.gauss(dist, stdev)
+    angle =0;#random.uniform(0, 2*math.pi)
     change_km=cmath.rect(dist_km, angle)
     dist_lat = change_km.imag
     dist_lon = change_km.real
@@ -16,11 +16,12 @@ def rand_loc(dist=5, stdev=.1, home=(50,3)):
 #conversion factor coords to km based on your latitude
 def degLatInKm(dist, lat=55):
     #constant assuming earth is a sphere
-    # a degree latitude is about 111.2km, at my latitude
+    # a degree latitude is about 111.2km
     return dist/111.2
 
 def degLonInKm(dist, lat):
-    return dist/111.32*math.cos(lat)
+    #111.195 = pi/180*earthradius
+    return dist/(111.195*math.cos(math.radians(lat)))
 
 def readhome(filename="./home.txt"):
     try:
