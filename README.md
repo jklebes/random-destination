@@ -11,7 +11,7 @@ Command line / very simple / personal use
 
 (Windows: replace ```python``` with ```python -m``` or ```py -m```)
 
-Find our your coordinates here [https://gps-coordinates.org/my-location.php] or elsewhere and set coordinates:
+Find our your coordinates from openstreetmap or elsewhere and set coordinates:
 
 ```python destination.py home 50.363 2.4848```
 
