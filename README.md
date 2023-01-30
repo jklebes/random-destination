@@ -9,7 +9,7 @@ Command line / very simple / personal use
 
 #### Set and save starting location
 
-(Windows: replace ```python``` with ```python -m``` or ```py -m```)
+(Windows: replace ```python destination.py``` with ```python -m destination``` or ```py -m destination```)
 
 Find our your coordinates from openstreetmap or elsewhere and set coordinates:
 
