@@ -9,8 +9,6 @@ Command line / very simple / personal use
 
 #### Set and save starting location
 
-(Windows: replace ```python destination.py``` with ```python -m destination``` or ```py -m destination```)
-
 Find our your coordinates from openstreetmap or elsewhere and set coordinates:
 
 ```python destination.py home 50.363 2.4848```
