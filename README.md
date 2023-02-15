@@ -31,7 +31,7 @@ Path to destination exactly 5 km away.
 
 ```python destination.py path 5 0```
 
-prints out a link to the OpenStreetMap in the terminal.  It's clickable on my machine, on windows you may have to copy-paste the link to a browser.
+prints out a link to the OpenStreetMap in the terminal and opens in a browser.
 
 ## Hints
 
