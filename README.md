@@ -9,9 +9,7 @@ Command line / very simple / personal use
 
 #### Set and save starting location
 
-(Windows: replace ```python``` with ```python -m``` or ```py -m```)
-
-Find our your coordinates here [https://gps-coordinates.org/my-location.php] or elsewhere and set coordinates:
+Find our your coordinates from openstreetmap or elsewhere and set coordinates:
 
 ```python destination.py home 50.363 2.4848```
 
@@ -37,7 +35,7 @@ prints out a link to the OpenStreetMap in the terminal.  It's clickable on my ma
 
 ## Hints
 
-May well drop a pin in a body of water or somewhere else you can't go, just reroll.  If requesting a ```path``` and the destination generates in a body of water, it will move the endpoint to the shore and the path will be shorter than expected.
+``dest`` may well drop a pin in a body of water or somewhere else you can't go, just reroll.  If requesting a ```path``` and the destination generates in a body of water, it will move the endpoint to the shore and the path will be shorter than expected.
 
 Distances are as the crow flies, the actual distance along streets is longer - so input a number a bit less than half the run distance.
 
