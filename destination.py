@@ -96,7 +96,7 @@ if __name__=="__main__":
           exit()
       if len(restargs)>0:
           print("ignoring args ", restargs)
-      coords = [str(x) for x in geohash.geohash(home)]
+      coords = [str(x) for x in geohash.closest_geohash(home)]
       home=[str(x) for x in home]
       link = "https://www.openstreetmap.org/directions?engine=graphhopper_foot&route="+home[0]+"%2C"+home[1]+"%3B"+coords[0]+"%2C"+coords[1]+"#map=13/"+home[0]+"/"+home[1]
       webbrowser.open(link)
