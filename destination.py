@@ -2,6 +2,8 @@ import random
 import math
 import cmath
 import argparse
+import webbrowser
+import geohash
 
 def rand_loc(dist=5, stdev=.1, home=(50,3)):
     home_lat = home[0]
@@ -81,10 +83,23 @@ if __name__=="__main__":
       coords=[str(x) for x in coords_]
       if args.program=="dest":
         link="https://www.openstreetmap.org/?mlat="+coords[0]+"&mlon="+coords[1]+"&zoom=12"
-      else:
+      elif args.program == "path":
         home=[str(x) for x in home]
         link = "https://www.openstreetmap.org/directions?engine=graphhopper_foot&route="+home[0]+"%2C"+home[1]+"%3B"+coords[0]+"%2C"+coords[1]+"#map=13/"+home[0]+"/"+home[1]
       print(link)
+      webbrowser.open(link)
+    elif args.program == "hash" or args.program=="xkcd":
+      restargs = args.rest
+      home=readhome()
+      if home==0:
+          print('First set your home location by running "python destination.py home <your coordinates>" . ')
+          exit()
+      if len(restargs)>0:
+          print("ignoring args ", restargs)
+      coords = [str(x) for x in geohash.geohash(home)]
+      home=[str(x) for x in home]
+      link = "https://www.openstreetmap.org/directions?engine=graphhopper_foot&route="+home[0]+"%2C"+home[1]+"%3B"+coords[0]+"%2C"+coords[1]+"#map=13/"+home[0]+"/"+home[1]
+      webbrowser.open(link)
     else:
       print('usage "destination.py home <address>" or "destination.py path <distance>" or "destination.py dest <distance>".  Got first keyword argument '+args.program+'instead of "home","dest", or "path".')  
       exit()
