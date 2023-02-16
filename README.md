@@ -33,6 +33,14 @@ Path to destination exactly 5 km away.
 
 prints out a link to the OpenStreetMap in the terminal and opens in a browser.
 
+#### Also try
+
+```python destination.py xkcd```
+
+```python destination.py hash```
+
+Nearest [geohash](https://geohashing.site/geohashing/Main_Page) (30w rules).
+
 ## Hints
 
 ``dest`` may well drop a pin in a body of water or somewhere else you can't go, just reroll.  If requesting a ```path``` and the destination generates in a body of water, it will move the endpoint to the shore and the path will be shorter than expected.
