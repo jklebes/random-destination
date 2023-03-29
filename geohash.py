@@ -31,7 +31,17 @@ def geohash(home):
     return (n,w)
 
 def closest_geohash(home):
-    coords = [geohash((home[0]+i,home[1]+j)) for i in [-1,0,1] for j in [-1,0,1]]
-    dist_sq = [(home[0]-coord[0])**2 + (home[1]-coord[1])**2 for coord in coords]
-    min_index = np.argmin(dist_sq)
-    return coords[min_index]
+    coords=[]
+    dist_sq=[]
+    for i in [-1,0,1]:
+        for j in [-1,0,1]:
+            coord = geohash((home[0]+i,home[1]+j))
+                if not iswater(coord)
+                    coords.append(coord)
+                    dist_sq.append((home[0]-coord[0])**2 + (home[1]-coord[1])**2)
+    if len(coords)>0:
+        min_index = np.argmin(dist_sq)
+        return coords[min_index]
+    else:
+        print("No land geohashes near your location today!")
+        return None
