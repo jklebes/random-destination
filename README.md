@@ -39,7 +39,7 @@ prints out a link to the OpenStreetMap in the terminal and opens in a browser.
 
 ```python destination.py hash```
 
-Nearest [geohash](https://geohashing.site/geohashing/Main_Page) (30w rules).
+Nearest [geohash](https://geohashing.site/geohashing/Main_Page) (30w rules).  Warning: the openstreetmap pin is not the exact geohash location, but the nearest accessible locations on streets and paths.
 
 ## Hints
 
