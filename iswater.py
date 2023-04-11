@@ -1,8 +1,8 @@
-from OSMPythonTools.overpass import overpassQueryBuilder, Overpass
+#from OSMPythonTools.overpass import overpassQueryBuilder, Overpass
 import numpy as np
-from shapely.geometry import Polygon
-import folium
-import geopandas as gpd
+#from shapely.geometry import Polygon
+#import folium
+#import geopandas as gpd
 
 #Use overpass to query whether the point falls in water.
 #and shore proximity - keep points very close to shore
