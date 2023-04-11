@@ -2,7 +2,7 @@ import hashlib, datetime, struct, sys, re
 from urllib.request import urlopen
 from urllib.error import HTTPError
 import numpy as np
-
+from iswater import *
 
 def geohash(home):
     # code from https://geohashing.site/geohashing/Implementations/Libraries/Python
