@@ -36,7 +36,7 @@ def closest_geohash(home):
     for i in [-1,0,1]:
         for j in [-1,0,1]:
             coord = geohash((home[0]+i,home[1]+j))
-            if not iswater(coord)
+            if not iswater(coord):
                 coords.append(coord)
                 dist_sq.append((home[0]-coord[0])**2 + (home[1]-coord[1])**2)
     if len(coords)>0:
